@@ -1,0 +1,31 @@
+#pagerComponent
+{
+    width:30vw;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#pagerComponent > *
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#previousPagerController , #nextPagerController
+{
+
+    height: 4vh;
+    width: 7vh;
+}
+
+#currentPageComponent
+{
+    height: 4vh;
+    width: 4vh;
+    color: White;
+    background-color: #A41A1A;
+    border-radius: 50%;
+}
+

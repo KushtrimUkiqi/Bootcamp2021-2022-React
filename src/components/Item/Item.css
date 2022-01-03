@@ -1,0 +1,168 @@
+@keyframes imgZoomIn
+{
+    0% 
+        {
+            background-size: 105%;
+        }
+
+        20% 
+        {
+            background-size: 110%;
+        }
+
+        40% 
+        {
+            background-size: 115%;
+        }
+
+        60% 
+        {
+            background-size: 120%;
+        }
+
+        80%
+        {
+            background-size: 125%;
+        }
+
+        100%
+        {
+            background-size: 130%;
+        }
+}
+
+@keyframes imgZoomOut
+{
+    0% 
+        {
+            background-size: 125%;
+        }
+
+        20% 
+        {
+            background-size: 120%;
+        }
+
+        40% 
+        {
+            background-size: 115%;
+        }
+
+        60% 
+        {
+            background-size: 110%;
+        }
+
+        80%
+        {
+            background-size: 105%;
+        }
+
+        100%
+        {
+            background-size: 100%;
+        }
+}
+
+.itemCard
+{
+    margin: 2vh 1vw;
+    max-width: 15vw;
+    min-width: 10vw;
+    border: 1px solid rgba(0, 0, 0, 0.082);
+}
+
+.itemImg
+{
+    max-width: 15vw;
+    min-width: 10vw;
+    max-height: 20vw;
+    min-height: 15vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: imgZoomOut;
+    animation-duration: 300ms;
+}
+
+
+
+.itemImg:hover
+{
+    background-size: 130%;
+    animation: imgZoomIn;
+    animation-duration: 300ms;
+}
+
+.itemData
+{
+    
+    font-size: 12px;
+    padding: 0.2vh;
+}
+
+.itemPrice
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.itemPrice > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width: 7.5vw;
+    display: flex;
+    justify-content: center!important;
+}
+
+.itemPrice > div:nth-child(1)
+{
+    background-color: #A41A1A;
+    color: white;
+}
+
+.itemPrice > div:nth-child(2) > div
+{
+    width: 2vw;
+}
+
+.brandName
+{
+    padding: 1vh 0;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
+.itemName  , .itemDescription
+{
+    padding: 1vh 0;
+    text-align: center;
+}
+
+
+
+
+@media only screen and (min-width: 992px) 
+{
+    .itemCard
+    {
+        width: 15vw;
+        
+    }
+
+    /* .itemImg
+    {
+        max-width: 20vw;
+        min-width: 15vw;
+        max-height: 10vh;
+        min-height: 7.5vh;
+        background-repeat: no-repeat;
+        background-position: center;   
+    } */
+
+}

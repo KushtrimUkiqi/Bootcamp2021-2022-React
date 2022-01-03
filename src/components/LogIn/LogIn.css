@@ -1,0 +1,78 @@
+
+#logIn
+{
+    width: 70vw;
+    background-color: rgba(0, 0, 0, 0.082);
+    margin:15vh auto 30vh auto;
+    padding: 10vh 0; 
+    align-items: center;
+}
+
+
+#logIn , #userNameLogInInput , #passwordLogInInput
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#userNameLogInInput , #passwordLogInInput
+{
+    padding: 1vh 0;
+}
+
+#userNameLogInInput > * , #passwordLogInInput > *
+{
+    text-align: left;
+    font-size: 14px;
+}
+
+
+
+#logInButton 
+{
+    background-color: #A41A1A;
+    border-color: #A41A1A;
+    color: white;
+    width: 100%;
+    box-shadow: none;
+}
+
+#logInButton:hover
+{
+    background-color: black;
+    border-color: black;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+#logInButton , #registerOption
+{
+    margin: 1vh 0;
+}
+
+#registerOption
+{
+    border-top: .3px solid transparent;
+    border-bottom: .3px solid transparent;
+    font-size: 10px;
+
+}
+
+#registerOption:hover
+{
+    border-color: #A41A1A;
+    color: #A41A1A; 
+    transition-duration: 0.3s;
+}
+
+
+
+@media only screen and (min-width: 992px) 
+{
+    #logIn
+    {
+        width: 20vw!important;
+
+    }
+}

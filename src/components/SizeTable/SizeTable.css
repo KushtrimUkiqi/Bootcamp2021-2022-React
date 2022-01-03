@@ -1,0 +1,38 @@
+#sizeTableComponent
+{
+    flex-direction: column;
+}
+#sizeTable > div
+{
+    height: 3vw;
+    width: 3vw;
+    color: black;
+    margin: 1px;
+    border: 1px solid transparent;
+    
+}
+
+
+
+#sizeTable , #sizeTable > div ,#sizeTableComponent
+{
+    display: flex;
+    justify-content: center;
+    align-items: center!important;
+}
+
+.available
+{
+    background-color: rgba(0, 0, 0, 0.082);
+    cursor:pointer;
+} 
+
+.available:hover
+{
+    background-color: rgba(0, 0, 0, 0.143);
+}
+.notAvailable
+{
+   opacity: 0.3;
+   cursor: none;
+}

@@ -1,0 +1,33 @@
+
+
+#legal ul
+{
+    padding: 2vh 10vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#legal li:hover
+{
+    color: rgb(167, 117, 117);
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 992px)
+{
+    #legal
+    { 
+       width: 70%;
+       margin: auto;
+    }
+}
+
+
+@media only screen and (min-width: 992px) 
+{
+   #legal
+    { 
+       width: 50%;
+       margin: auto;
+    }
+}

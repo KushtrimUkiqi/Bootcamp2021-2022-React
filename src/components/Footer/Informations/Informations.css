@@ -1,0 +1,25 @@
+#informations
+{
+    padding: 2vh 4vw;
+}
+
+#informationsData
+{
+    padding: 1vh 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#informationsData a
+{
+    color: white;
+    text-decoration: none;
+    
+}
+
+#informationsData a:hover
+{
+    color: rgb(167, 117, 117);
+}

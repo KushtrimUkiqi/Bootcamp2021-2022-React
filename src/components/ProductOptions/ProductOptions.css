@@ -1,0 +1,17 @@
+#productOptionsCartAndSave
+{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#productOptionsCartAndSave > h3 
+{
+    width: 20vw;
+    margin: 0;
+}
+
+#productOptionsCartAndSave > div
+{
+    width: 5vw;
+}

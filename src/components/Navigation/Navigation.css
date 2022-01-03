@@ -1,0 +1,128 @@
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 5vw;
+    height: 6vh;
+    box-shadow: 0 0.01px 1px 1px rgba(255, 0, 0, 0.116);
+}
+
+#logo 
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 25vw;
+    /* background-color: rgb(28, 25, 56); */
+    height: 5vh;
+}
+
+#categories
+{
+    display: none;
+}
+
+#toolbar
+{
+    display: flex;
+    justify-content: space-around;
+    width: 45vw;
+}
+
+#burger
+{
+    width: 25vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+#logo svg 
+{
+    width: 15vw;
+
+    /* height: 10vh; */
+}
+
+
+ #toolbar svg , #burger svg
+{
+    width: 8vw;
+    height: 8vh;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+
+    #logo svg 
+{
+    width: 5vw;
+}
+
+#toolbar
+{
+    width: 25vw;
+}
+
+ #toolbar svg , #burger svg
+{
+    width: 4vw;
+    height: 4vh;
+}
+}
+
+
+@media only screen and (min-width: 992px) 
+{
+    nav
+    {
+        padding: 4vh 5vw;
+    }
+
+
+    #logo svg 
+{
+    width: 5vw;
+}
+
+
+#toolbar
+{
+    width: 20vw;
+}
+
+
+ #toolbar svg , #burger svg
+{
+    width: 4vw;
+    height: 4vh;
+}
+
+#categories
+{
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+#burger
+{
+    display: none;
+}
+
+#navigationList{
+    display: block;
+}
+
+#navigationList svg{
+    display: none;
+}
+
+.categoriesButton
+{
+    display: none;
+}
+}

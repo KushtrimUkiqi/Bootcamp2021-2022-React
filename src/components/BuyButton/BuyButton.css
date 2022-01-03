@@ -1,0 +1,30 @@
+#buyButton
+{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    padding: 10vh 10vw 10vh 0;
+}
+
+.amount
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.amount input
+{
+    width: 6vw;
+}
+
+#buyButton > button
+{
+    padding: 1.5vh 5vw;
+    border-color:transparent;
+    background-color: #A41A1A;
+    color: white;
+}
+
+#buyButton > button:hover
+{
+    background-color: #a41a1ae7;
+}

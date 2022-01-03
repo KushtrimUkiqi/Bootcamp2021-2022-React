@@ -1,0 +1,21 @@
+#table > div
+{
+    padding: 2vh 2vw;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+#table a
+{
+    display: block;
+    padding: 0.2vh 7vw;
+}
+
+.listStyle
+{
+    color: black!important;
+}
+
+.listStyle:hover
+{
+    color:rgba(133, 38, 38, 0.905)!important;
+}

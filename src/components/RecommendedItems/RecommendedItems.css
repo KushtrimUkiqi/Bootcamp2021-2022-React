@@ -1,0 +1,43 @@
+#moreItems
+{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh 0;
+    background-color: rgba(0, 0, 0, 0.034);
+}
+
+#itemList
+{
+    background-color: rgba(0, 0, 0, 0.034);
+}
+
+
+#itemListControllerShrink
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itemListControllerSvg , #itemListControllerShrinkSvg{
+    width: 10vw;
+    height: 10vw;
+}
+
+#itemListControllerShrinkSvg{
+    margin: auto;
+}
+
+
+
+ @media only screen and (min-width: 756px) 
+{
+    #itemListControllerSvg , #itemListControllerShrinkSvg{
+        width: 5vw;
+        height: 5vw;
+    }
+} 

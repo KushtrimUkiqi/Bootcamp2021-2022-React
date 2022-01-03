@@ -1,0 +1,130 @@
+#contactUs
+{
+    padding: 2vh 5vw;
+}
+
+#socialMedia svg
+{
+    width: 7vw;
+    height: 7vw;
+    
+}
+
+
+#newsLetter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsLetter > div , #socialMedia p
+{
+    font-size: 10px;
+}
+
+#newsLetter form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsLetter button
+{
+    background-color: #A41A1A;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    color: #A41A1A;
+}
+
+#newsLetter button svg ,#newsLetter input
+{
+    height: 4vh;
+}
+
+#socialMedia
+{
+    padding: 3vh 0;
+    margin: auto;
+    width: 40vw;
+}
+
+#socialMedia > div 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#socialMedia p
+{
+    text-align: center;
+}
+
+
+
+
+@media only screen and (min-width: 576px) and (max-width: 992px)
+{
+    #contactUs svg
+    {
+        width: 3vw;
+    }
+
+    #newsLetter button svg ,#newsLetter input
+    {
+        height: 3vh;
+    }
+
+}
+
+
+@media only screen and (min-width: 992px) 
+{
+
+    #contactUs
+    {
+        padding: 5vh 0;
+        /* display: flex;
+        justify-content: space-between;
+        width: 50vw;
+        margin: auto;
+        align-items: baseline; */
+    }
+
+    #contactUs svg
+    {
+        width: 5vh;
+    }
+
+    #newsLetter > div , #socialMedia p
+    {
+        font-size: 15px;
+    }
+
+    #newsLetter button
+    {
+        width: 5vw;
+    }
+
+    #newsLetter button svg ,#newsLetter input
+    {
+        height: 5vh;
+    }
+
+    #socialMedia
+    {
+        width: 25vw;
+        padding: 10vh 0;
+    }
+
+    #socialMedia p
+    {
+        margin-bottom: 0;
+    }
+}

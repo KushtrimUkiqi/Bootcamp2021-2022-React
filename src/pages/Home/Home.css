@@ -1,0 +1,11 @@
+#body
+{
+    margin: 1vh 3vw;
+}
+
+#body > *
+{
+    display: block;
+}
+
+

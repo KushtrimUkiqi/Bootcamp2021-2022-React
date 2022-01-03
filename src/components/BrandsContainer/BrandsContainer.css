@@ -1,0 +1,35 @@
+#brandNames
+{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90vw;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.116);
+    /* grid-template-row: 1fr 1fr 1fr 1fr; */
+}
+
+/* 
+#brandNames > *
+{
+    width: 20vw;
+} */
+
+
+ /* @media only screen and (min-width: 576px)
+{
+    #brandNames
+{
+
+    padding: 2vh 2vw;
+
+}
+
+    #brandNames > *
+    {
+        width: 13vw;
+    }
+
+}  */
+

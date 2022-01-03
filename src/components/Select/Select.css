@@ -1,0 +1,21 @@
+#selectElement
+{
+    display: flex;
+    flex-direction: column;
+}
+
+select
+{
+    border-radius: 0px;
+}
+
+/* Chrome */
+select:focus > option:checked { 
+    background: #A41A1A !important;
+}
+
+/* Firefox */
+select option:checked,
+select option:hover {
+    box-shadow: 0 0 10px 100px #A41A1A inset;
+}
