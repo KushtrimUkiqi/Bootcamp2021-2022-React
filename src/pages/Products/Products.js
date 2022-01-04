@@ -138,7 +138,7 @@ export default function Product() {
 
     function generateURL()
     {
-        const url = `http://127.0.0.1:8080/get/product/category`
+        const url = `https://ktm-eshop.herokuapp.com/get/product/category`
         const query = `?categoryId=${id}&itemsNumber=${productsNumber}&lowestPrice=${productsPriceRange.lowestPrice}&highestPrice=${productsPriceRange.highestPrice}&colors=${productsPreferredColor}&brands=${productsPreferredBrand}&sizes=${productsPreferedSizes}`;
         return url+query;
     }
@@ -152,21 +152,21 @@ export default function Product() {
       }
 
     async function fetchPrice() {
-        const url  = `http://127.0.0.1:8080/get/category/prices?categoryId=${id}`;
+        const url  = `https://ktm-eshop.herokuapp.com/get/category/prices?categoryId=${id}`;
         const resp = await fetch(url);
         const data = await resp.json();
         setProductsPrices(data);
       }
 
       async function fetchBrands() {
-        const url  = `http://127.0.0.1:8080/get/category/brands?categoryId=${id}`;
+        const url  = `https://ktm-eshop.herokuapp.com/get/category/brands?categoryId=${id}`;
         const resp = await fetch(url);
         const data = await resp.json();
         setProductsBrands(data);
       }
 
       async function fetchSizes() {
-        const url  = `http://127.0.0.1:8080/get/category/sizes?categoryId=${id}`;
+        const url  = `https://ktm-eshop.herokuapp.com/get/category/sizes?categoryId=${id}`;
         const resp = await fetch(url);
         const data = await resp.json();
         setProductsSizes(data);
