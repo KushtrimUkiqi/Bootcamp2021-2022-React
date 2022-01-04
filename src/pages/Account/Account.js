@@ -6,7 +6,8 @@ export default function Account() {
     // const [loggedIn,setLoggedIn] = useState(false);
     return (
         <section >
-            <LogIn></LogIn>
+            {/* <LogIn></LogIn> */}
+            logged in
         </section>
     )
 }

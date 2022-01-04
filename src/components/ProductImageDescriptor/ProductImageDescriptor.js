@@ -2,8 +2,8 @@ import React from 'react';
 import './ProductImageDescriptor.css';
 import { useState , useEffect} from 'react';
 
-export default function ProductImageDescriptor({images}) {
-    const [focusedImage,setFocusedImage] = useState("https://www.sport-m.com.mk/ProductImages/FY5933.jpg");
+export default function ProductImageDescriptor({images,mainImage}) {
+    const [focusedImage,setFocusedImage] = useState(mainImage);
     return (
         <div id="productImageDescriptor">
             <div id="focusImage" style={{backgroundImage : `url(${focusedImage})`}}></div>

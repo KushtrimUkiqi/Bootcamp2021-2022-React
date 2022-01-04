@@ -8,7 +8,7 @@ export default function SizeTable({sizes}) {
         <div id='sizeTableComponent'>
         <label>Pick your size</label>
             <div id="sizeTable">
-            {sizes.map((size,index)=> <div key={index} id={size.size}  className={(size.available ? "available" : "notAvailable") + " " + (size.size===selectedSize ? "colorBorder" : "transparentBorder")} onClick={(e) => {if(size.available)setSelectedSize(e.target.id)}}>{size.size}</div>)}
+            {sizes.map((size,index)=> <div key={index} id={size.name}  className={(size.available ? "available" : "notAvailable") + " " + (size.name===selectedSize ? "colorBorder" : "transparentBorder")} onClick={(e) => {if(size.available)setSelectedSize(e.target.id)}}>{size.name}</div>)}
             </div>
         </div>
     )

@@ -12,7 +12,7 @@ export default function Item({item}) {
         </Link>
                 <div className="itemData">
                     <div className="itemPrice">
-                        <div>{item.price}</div>
+                        <div>{item.price}$</div>
                         <div>
                             <div className='saveItem' onClick={() => {}} >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

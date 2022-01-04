@@ -1,3 +1,9 @@
+#loadingNavigation
+{
+    padding:0 5vw;
+    height: 6vh;
+    box-shadow: 0 0.01px 1px 1px rgba(0, 0, 0, 0.116);
+}
 nav
 {
     display: flex;
@@ -5,13 +11,13 @@ nav
     justify-content: space-between;
     padding:0 5vw;
     height: 6vh;
-    box-shadow: 0 0.01px 1px 1px rgba(255, 0, 0, 0.116);
+    box-shadow: 0 0.01px 1px 1px rgba(0, 0, 0, 0.116);
 }
 
 #logo 
 {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 25vw;
     /* background-color: rgb(28, 25, 56); */

@@ -3,9 +3,10 @@
     padding: 1vh 1vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center!important;
+    align-items: center;
     justify-items: center!important;
     margin: auto;
+    grid-auto-rows: auto;
 }
 
 @media only screen and (max-width: 768px)
@@ -27,8 +28,8 @@
     {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr!important;
-        align-items: center;
+        align-items: top!important;
         justify-items: center;
-        margin: auto;
+        margin: 0 auto!important;
     }
 }

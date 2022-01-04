@@ -1,6 +1,14 @@
 #sizeTableComponent
 {
     flex-direction: column;
+    align-items: start;
+    padding-top: 7vh;
+}
+
+#sizeTable
+{
+    display: flex;
+    justify-content: flex-start;
 }
 #sizeTable > div
 {
@@ -14,7 +22,7 @@
 
 
 
-#sizeTable , #sizeTable > div ,#sizeTableComponent
+ #sizeTable > div 
 {
     display: flex;
     justify-content: center;

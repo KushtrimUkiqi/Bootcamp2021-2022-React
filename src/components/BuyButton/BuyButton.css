@@ -2,8 +2,9 @@
 {
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:center;
     padding: 10vh 10vw 10vh 0;
+    border-bottom: 1px solid black;
 }
 
 .amount
@@ -14,6 +15,8 @@
 .amount input
 {
     width: 6vw;
+    border-color: transparent;
+    background: rgba(0, 0, 0, 0.082);
 }
 
 #buyButton > button

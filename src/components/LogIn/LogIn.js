@@ -1,6 +1,6 @@
 import React from 'react';
 import "./LogIn.css";
-
+import {Link} from 'react-router-dom';
 
 const logInError = {exists: false , message: ""};
 
@@ -23,8 +23,8 @@ export default function LogIn() {
                 <input type="password" name="password"/>
             </div>
 
-            <button id="logInButton" onClick={() => {}}>Log in</button>
-            <div id="registerOption" onClick={() => {}}>Don't have an account?  Register!</div>
+            <button id="logInButton"  onClick={(e) => {e.preventDefault();}}>Log in</button>
+            <Link to="/register"><div id="registerOption" onClick={() => {}}>Don't have an account?  Register!</div></Link>
 
         </form>
     )

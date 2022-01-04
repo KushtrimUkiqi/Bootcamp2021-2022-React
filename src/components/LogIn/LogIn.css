@@ -4,10 +4,17 @@
     width: 70vw;
     background-color: rgba(0, 0, 0, 0.082);
     margin:15vh auto 30vh auto;
-    padding: 10vh 0; 
+    padding: 7vh 0; 
     align-items: center;
 }
 
+#errorLogIn
+{
+    height: 4vh;
+    color: #A41A1A;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 #logIn , #userNameLogInInput , #passwordLogInInput
 {
@@ -46,9 +53,16 @@
     transition-duration: 0.3s;
 }
 
-#logInButton , #registerOption
+#logInButton 
+{
+    margin: 2vh 0;
+    color: white; 
+}
+
+#registerOption
 {
     margin: 1vh 0;
+    color: black;
 }
 
 #registerOption

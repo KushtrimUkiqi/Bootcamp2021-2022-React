@@ -10,7 +10,7 @@ export default function ProductOptions({options}) {
 
     return (
         <div>
-            <h1>{options.name}</h1>
+            <h1 id='productName'>{options.name}</h1>
             <div>Product id: {options.id}</div>
             
             <div id="productOptionsCartAndSave">
@@ -28,9 +28,8 @@ export default function ProductOptions({options}) {
                                 </svg>
                             </div>
             </div>
-            <BuyButton onBuy={(amount) => buyProduct(amount)}></BuyButton>
             <SizeTable sizes={options.sizes}></SizeTable>
-            
+            <BuyButton onBuy={(amount) => buyProduct(amount)}></BuyButton>
         </div>
     )
 }
