@@ -11,7 +11,7 @@ export default function Product() {
     
     async function  fetchProduct()
     {
-        const url = `http://127.0.0.1:8080/product?id=${id}`;
+        const url = `https://ktm-eshop.herokuapp.com/product?id=${id}`;
         const resp = await fetch(url);
         const data = await resp.json();
         setProductData(data);
