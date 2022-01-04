@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Navigate,Outlet} from 'react-router';
+import {UserContext} from '../../contexts/UserContext';
 
 export default function ProtectedAccountRoute() {
 
-    const auth = false;
-    return auth ? <Outlet/> : <Navigate to="/login" />;
+    const {auth}  = useContext(UserContext);
+    return auth.loggedIn ? <Outlet/> : <Navigate to="/login" />;
 }

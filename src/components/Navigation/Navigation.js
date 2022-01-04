@@ -8,6 +8,7 @@ import {useState,useEffect} from 'react';
 
 function Navigation() {
   
+    
     const [loading,setLoading] = useState(true);
     const [emptyCard,cardIsEmpty] = useState(false);
     const [emptySavedItems,savedItemsIsEmpty] = useState(false);

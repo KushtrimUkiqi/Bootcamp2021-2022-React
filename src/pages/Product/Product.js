@@ -26,10 +26,7 @@ export default function Product() {
     },[]);
 
 
-    //TODO CHANGE WITH A CERTAIN VALUE FROM THE API
-    const options = {id: "FY5933" ,name: "Adidas COURTPHASE",price: "200", description:{}, sizes:[ {size: 'XS' , available : true},{size: 'S' , available : true}, {size: 'M' , available : false}, {size: 'L' , available : true},{size: 'XL' , available : true},{size: '2XL' , available : false},{size: '3XL' , available : true}]}
-    const product = {id: "a723", brand : "Adidas" , name: 'addidas shoe', price : "130$" , image: "https://www.sport-m.com.mk/ProductImages/FY5933.jpg", images: ["https://www.sport-m.com.mk/ProductImages/FY5933.jpg","https://www.sport-m.com.mk/ProductImages/FY5933_1.jpg","https://www.sport-m.com.mk/ProductImages/FY5933_2.jpg","https://www.sport-m.com.mk/ProductImages/FY5933_3.jpg"] ,  description : 'shoe for these cold times' , colors : ["red" , "black" , "gray" ,"white"] , sizes : ["s","m","xl"]}
-    return (
+     return (
        <>
             {loading && (<div className='loading'>loading</div>)}
 

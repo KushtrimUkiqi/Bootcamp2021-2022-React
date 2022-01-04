@@ -5,9 +5,8 @@ import LogIn from '../../components/LogIn/LogIn';
 export default function Account() {
     // const [loggedIn,setLoggedIn] = useState(false);
     return (
-        <section >
-            {/* <LogIn></LogIn> */}
-            logged in
+        <section id="accountLoggedInUser">
+            welcome 
         </section>
     )
 }
