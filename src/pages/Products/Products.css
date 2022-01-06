@@ -2,18 +2,18 @@
 {
     display: none;
 }
-
-/* #productBody
+/* 
+#productBody
 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items:baseline;
     flex-direction: column;
 
 } */
 
 #filterTable {
-    margin: auto!important;
+    /* margin: auto!important; */
     width: 50vw!important;
   }
 
@@ -70,6 +70,12 @@
 }
 
 
+#firstElement
+{
+    display: flex;
+    justify-content: space-around;
+}
+
 @media only screen and (min-width: 992px) {
 
     #productBody
@@ -84,8 +90,6 @@
     {
         grid-column: 1 / span 2;
         grid-row: 1;
-        display: flex;
-        justify-content: space-around;
         padding: 0 20vw;
 
 

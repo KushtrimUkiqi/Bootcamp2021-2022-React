@@ -15,7 +15,7 @@ export default function LogIn() {
 
 
     async function loginUser(u,p) {
-        const url =  `http://127.0.0.1:8080/login?username=${u}&password=${p}`;
+        const url =  `https://ktm-eshop.herokuapp.com/login?username=${u}&password=${p}`;
         const resp = await fetch(url);
         const data = await resp.json();
         // if(data.sessionId === undefined)

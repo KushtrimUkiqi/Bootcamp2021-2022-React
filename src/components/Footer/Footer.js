@@ -21,9 +21,8 @@ export default function Footer() {
     return (
         <footer>
            <div id="footerInformations">
-                <Informations informationsTitle="Informations" informationsData={informationsData()}></Informations>
-                {/* <Informations informationsTitle="Help" informationsData={informationsData()}></Informations> */}
-                <Informations informationsTitle="My shopping cart" informationsData={informationsData()}></Informations> 
+                <Informations key="informations" informationsTitle="Informations" informationsData={informationsData()}></Informations>
+                <Informations key="shoppingCart" informationsTitle="My shopping cart" informationsData={informationsData()}></Informations> 
            </div>       
             <div id="footerData">
                 <Legal></Legal>

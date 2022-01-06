@@ -5,9 +5,9 @@ export default function Legal() {
     return (
         <div id="legal">
             <ul>
-                <li>Use policy</li>
-                <li>Privacy policy</li>
-                <li>Cookies</li>
+                <li key="l1">Use policy</li>
+                <li key="l2">Privacy policy</li>
+                <li key="l3">Cookies</li>
             </ul>
         </div>
     )

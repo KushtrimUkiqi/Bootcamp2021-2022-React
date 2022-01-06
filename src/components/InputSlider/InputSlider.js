@@ -8,8 +8,8 @@ export default function InputSlider({productsPriceRange,ranges , step , setPrefe
 
         <label style={{textAlign: "right"}} className="labelInputSlider">highest price {productsPriceRange.highestPrice} $</label>
         <div id="inputSlider">
-            <input id="ppInputDescending" type="range" min={ranges.lowestPrice} max={ranges.highestPrice} step={step} onChange={(e) => setPreferredHighestPrice(Number.parseInt(e.target.value))} />
-            <input id="ppInputAscending" type="range" min={ranges.lowestPrice} max={ranges.highestPrice}  step={step} onChange={(e) => setPreferredLowestPrice(Number.parseInt(e.target.value))} />
+            <input key="ppInputDescending" id="ppInputDescending" type="range" min={ranges.lowestPrice} max={ranges.highestPrice} step={step} onChange={(e) => setPreferredHighestPrice(Number.parseInt(e.target.value))} />
+            <input key="ppInputAscending" id="ppInputAscending" type="range" min={ranges.lowestPrice} max={ranges.highestPrice}  step={step} onChange={(e) => setPreferredLowestPrice(Number.parseInt(e.target.value))} />
         </div>
         <label className="labelInputSlider">lowest price {productsPriceRange.lowestPrice} $</label>
     </div>

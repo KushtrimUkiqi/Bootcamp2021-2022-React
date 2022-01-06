@@ -8,8 +8,8 @@ export default function Informations({informationsTitle,informationsData}) {
             <div id="informationsData">
                 {
                     Object.entries(informationsData)
-                        .map((data) =>
-                            <a href={data[1]}>{data[0]}</a>
+                        .map((data,index) =>
+                            <a key={index} href={data[1]}>{data[0]}</a>
                             )
                 }
             </div>
