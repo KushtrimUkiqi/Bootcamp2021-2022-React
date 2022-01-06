@@ -9,7 +9,6 @@
 {
     display: flex;
     padding: 5vh 0;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -21,5 +20,26 @@
 
 #productOptionsCartAndSave > div
 {
-    width: 5vw;
+    width: 10vw;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    #productOptionsCartAndSave > div
+{
+    width: 8vw;
+}
+}
+
+@media only screen and (max-width: 992px)
+{
+    #productOptionsCartAndSave
+    {
+        padding: 1vh 0;
+    }
+
+        #productOptionsCartAndSave > h3 
+    {
+        width: 50vw;
+    }
 }

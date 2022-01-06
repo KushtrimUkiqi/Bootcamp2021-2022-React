@@ -28,7 +28,7 @@ export default function Item({item}) {
                     </div>
         <Link key={item.id} to={"/product/" + item.id} className="listStyle">
                     <div key="brandName" className="brandName">{item.brand}</div>
-                    <div key="itemName" className="itemName">{item.name}</div>
+                    <div key="itemName" className="itemName"><p>{item.name}</p></div>
         </Link>
                 </div>
                 

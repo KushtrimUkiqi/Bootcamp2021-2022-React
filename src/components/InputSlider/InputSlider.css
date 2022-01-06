@@ -83,6 +83,19 @@ input[type="range"]::-moz-range-track {
   background-color: white;
 }
 
+@media only screen and (max-width: 768px) {
+  @media screen and (-webkit-min-device-pixel-ratio:0)
+  {
+  input[type='range'] {
+      width: 80vw!important;
+    }
+  
+    input[type='range']::-webkit-slider-thumb {
+      box-shadow: -83vw 0 0 80vw #A41A1A;
+    }
+  }}
+  
+
 
 @media only screen and (min-width: 992px) {
 @media screen and (-webkit-min-device-pixel-ratio:0)
@@ -92,7 +105,7 @@ input[type='range'] {
   }
 
   input[type='range']::-webkit-slider-thumb {
-    box-shadow: -15vh 0 0 13vh #A41A1A;
+    box-shadow: -13vw 0 0 12.2vw #A41A1A;
   }
 }}
 

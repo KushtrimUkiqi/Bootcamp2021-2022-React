@@ -1,20 +1,54 @@
+@keyframes displayTable
+{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0.1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    30%{
+        opacity: 0.3;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.8;
+    }
+    90%{
+        opacity: 0.9;
+    }
+}
+
 .none
 {
     display: none;
 }
-/* 
-#productBody
+
+
+#filterTableDiv
 {
     display: flex;
-    justify-content: space-between;
-    align-items:baseline;
-    flex-direction: column;
-
-} */
+    justify-content: center;
+    align-items: center;
+}
 
 #filterTable {
     /* margin: auto!important; */
-    width: 50vw!important;
+    width: 90vw!important;
+
   }
 
 
@@ -26,8 +60,10 @@
 
 #filterOptions
 {
+    animation: displayTable;
+    animation-duration: 0.4s;
     padding: 2vh 2vw;
-    /* background-color:rgba(0, 0, 0, 0.082); */
+    padding: 0 8vw;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -99,14 +135,6 @@
     {
         grid-row: 2;
         grid-column: 1;
-
-    }
-
-    #thirdElement
-    {
-        grid-row: 3;
-        grid-column: 1;
-
     }
 
     #fourthElement

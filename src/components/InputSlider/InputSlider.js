@@ -1,10 +1,10 @@
 import React from 'react';
 import './InputSlider.css';
 
-export default function InputSlider({productsPriceRange,ranges , step , setPreferredLowestPrice , setPreferredHighestPrice }) {
+export default function InputSlider({tableDisplay,productsPriceRange,ranges , step , setPreferredLowestPrice , setPreferredHighestPrice }) {
     return (
-    <div id="inputSliderComponent">
-        <h6 id="headingInputSlider">Choose the preferred prices</h6>
+    <div id="inputSliderComponent" className={tableDisplay ? "productTableDisplay" : "productTableDisplayNone" }>
+        <h6 id="componentText">Choose the preferred prices</h6>
 
         <label style={{textAlign: "right"}} className="labelInputSlider">highest price {productsPriceRange.highestPrice} $</label>
         <div id="inputSlider">

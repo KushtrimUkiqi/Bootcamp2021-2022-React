@@ -2,7 +2,6 @@
 {
     padding: 1vh 1vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center!important;
     margin: auto;
@@ -13,23 +12,25 @@
 {
     #listedItems
 {
-    padding: 1vh 10vw;
-    display: grid;
     grid-template-columns: 1fr 1fr!important;
-    align-items: center;
-    justify-items: center;
-    margin: auto;
+
 }    
 }
 
-@media only screen and (min-width: 768px)
+@media only screen and (min-width: 768px) and (max-width: 992px) 
 {
     #listedItems
     {
-        display: grid;
+        grid-template-columns: 1fr 1fr 1fr!important;
+    }
+}
+
+@media only screen and (min-width: 992px)
+{
+    #listedItems
+    {
         grid-template-columns: 1fr 1fr 1fr 1fr!important;
         align-items: top!important;
-        justify-items: center;
         margin: 0 auto!important;
     }
 }

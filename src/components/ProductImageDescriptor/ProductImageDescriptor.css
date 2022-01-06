@@ -38,6 +38,30 @@
 .colorBorder{border-color: #A41A1A!important;     transition-duration: 1s; opacity:0.7;}
 .transparentBorder{border-color: transparent!important;}
 
+
+@media only screen and (min-width: 768px)  and (max-width: 992px) 
+{
+    #productImageDescriptor
+    {
+        margin: auto;
+    }
+    
+    #focusImage
+    {
+        width: 72vw;
+        height : 72vw;
+        margin-right: 1px;
+    }
+    
+    
+    #remainingImages > div
+    {
+        width: 18vw;
+        height : 18vw;
+    }
+}
+
+
 @media only screen and (min-width: 992px) {
     #productImageDescriptor
 {

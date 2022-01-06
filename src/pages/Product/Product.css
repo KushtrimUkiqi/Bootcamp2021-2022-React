@@ -19,7 +19,16 @@
     font-weight: bold;
     padding-right: 1vw;
 }
-
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    .productDetails
+    {
+        width: 72vw!important;
+        margin: auto;
+        padding: 0;
+    }
+   
+}
 
 @media only screen and (min-width: 992px) 
 {

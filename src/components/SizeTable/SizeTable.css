@@ -17,17 +17,12 @@
     color: black;
     margin: 1px;
     border: 1px solid transparent;
-    
-}
-
-
-
- #sizeTable > div 
-{
     display: flex;
     justify-content: center;
     align-items: center!important;
+    
 }
+
 
 .available
 {
@@ -44,3 +39,42 @@
    opacity: 0.3;
    cursor: none;
 }
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    #sizeTableComponent
+    {
+        justify-content: flex-end;
+        border-top: 1px solid black;
+    }
+    #sizeTable > div
+    {
+        height: 5vw;
+        width: 5vw;
+        
+    }
+
+    #sizeTableComponent
+    {
+        padding-top: 0.3vh;
+    }
+
+}
+@media only screen and (max-width: 768px)
+{
+    #sizeTableComponent
+    {
+        justify-content: flex-end;
+        border-top: 1px solid black;
+    }
+    #sizeTable > div
+    {
+        height: 8vw;
+        width: 8vw;
+        
+    }
+
+    #sizeTableComponent
+    {
+        padding-top: .5vh;
+    }
+} 

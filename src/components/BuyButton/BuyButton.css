@@ -31,3 +31,44 @@
 {
     background-color: #a41a1ae7;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    #buyButton
+    {
+
+        justify-content:space-between;
+        padding-top: 3vh;
+    }
+
+        .amount input
+    {
+        width: 10vw;
+        padding: .3vh 0;
+    }
+
+        #buyButton > button
+    {
+        padding: 1.5vh 20vw;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+        #buyButton
+    {
+
+        justify-content:space-between;
+        padding-top: 3vh;
+    }
+
+        .amount input
+    {
+        width: 20vw;
+    }
+
+        #buyButton > button
+    {
+        padding: 1.5vh 20vw;
+    }
+}

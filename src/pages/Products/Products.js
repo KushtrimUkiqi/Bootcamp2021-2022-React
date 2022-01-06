@@ -47,16 +47,16 @@ export default function Product() {
     //@By default the value is set to be "standard";
     const [productsOrder,setProductsOrder] = useState("standard");
 
-            //hard coded value for colors !!!might be changed in the future
+            //hard coded value for order products options !!!might be changed in the future
             const productsOrderOptions = [{value: "standard", text: "Standard" } , {value: "price_ascending", text: "Price ascending" },{value: "price_descending", text: "Price descending" } ];
-            const changeProductsOrder = val => setProductsOrder(val);
+            const changeProductsOrder = val => setProductsOrder(val); 
 
     //@userChangeableSTATE
     //products number represents the number of the products that need to be displayed , the value can be 20, 40 or 80 .
     // @By default the value is set to be 20
     const[productsNumber,setProductsNumber] = useState(20);
 
-            //hard coded value for colors !!!might be changed in the future
+            //hard coded value for number of products to be displayed !!!might be changed in the future
             const productsNumberOptions = [{value: 20 , text : "20"},{value: 40 , text : "40"},{value: 80 , text : "80"}]
             const changeProductsNumber = val => setProductsNumber(val);
     
@@ -109,9 +109,9 @@ export default function Product() {
 
                 //Function that closes all the options for filtering the products
                 function setAllFilterButtonsToFalse()
-                { setPbTableDisplay(false); setPsTableDisplay(false); setPcTableDisplay(false);}
+                { setPbTableDisplay(false); setPsTableDisplay(false); setPcTableDisplay(false); setPpTableDisplay(false);}
         
-        
+                const[ppTableDisplay,setPpTableDisplay] = useState(false);
                 const[pbTableDisplay,setPbTableDisplay] = useState(false);
                 const[pcTableDisplay,setPcTableDisplay] = useState(false);
                 const[psTableDisplay,setPsTableDisplay] = useState(false);
@@ -192,6 +192,7 @@ export default function Product() {
             let arr = getItems;
                 if(productsOrder === "price_ascending")
                 { 
+            
                     for(var i = 0; i < arr.length; i++){
                     
                     // Last i elements are already in place  
@@ -200,8 +201,8 @@ export default function Product() {
                       // Checking if the item at present iteration 
                       // is greater than the next iteration
                       
-                      if(arr[j] > arr[j+1]){
-                          
+                      if(arr[j].price < arr[j+1].price){
+
                         // If the condition is true then swap them
                         var temp = arr[j]
                         arr[j] = arr[j + 1]
@@ -209,6 +210,8 @@ export default function Product() {
                       }
                     }
                   }}
+
+
                 else if(productsOrder === "price_descending")
                 { 
                     for(var i = 0; i < arr.length; i++){
@@ -219,7 +222,7 @@ export default function Product() {
                       // Checking if the item at present iteration 
                       // is greater than the next iteration
                       
-                      if(arr[j] < arr[j+1]){
+                      if(arr[j].price > arr[j+1].price){
                           
                         // If the condition is true then swap them
                         var temp = arr[j]
@@ -228,6 +231,8 @@ export default function Product() {
                       }
                     }
                   }}
+
+
                 setGetItems(arr);
           }
 
@@ -237,34 +242,29 @@ export default function Product() {
                 
 
                 <div id="firstElement">
-                    <Select labelText="Order by" onChangeFunction={(e)=> changeProductsOrder(e.target.value)} name="sort" options={productsOrderOptions}></Select>
+                    <Select labelText="Order by" onChangeFunction={(e)=> changeProductsOrder(e.target.value) } name="sort" options={productsOrderOptions}></Select>
                     <Select labelText="Display" onChangeFunction={(e)=> changeProductsNumber(e.target.value)} name="display" options={productsNumberOptions}></Select>
                 </div>
 
-                <button id='filterTable' className={filterTableDisplay ? "clickedButton" : ""} onClick={() => {setFilterTableDisplay(!filterTableDisplay); if(filterTableDisplay)setAllFilterButtonsToFalse();}}>Filter</button>
+                <div id='filterTableDiv'><button id='filterTable' className={filterTableDisplay ? "clickedButton" : ""} onClick={() => {setFilterTableDisplay(!filterTableDisplay); if(filterTableDisplay)setAllFilterButtonsToFalse();}}>Filter</button></div>
 
                 <div id="secondElement" className={filterTableDisplay ? "filterTable" : "filterTableNone"}>
 
                     <div id='filterOptions' >
-                        <button id="finishFilter" onClick={masterStateUpdate}>done</button>
-                        <InputSlider productsPriceRange={productsPriceRange} ranges={productsPrices}  step={5} setPreferredLowestPrice={(number) => {setProductsPriceRange({lowestPrice : number ,highestPrice : productsPriceRange.highestPrice})}} setPreferredHighestPrice={(number) => {setProductsPriceRange({lowestPrice : productsPriceRange.lowestPrice ,highestPrice : 999 - number })}} ></InputSlider>
+                        <button id="finishFilter" onClick={() => {masterStateUpdate(); setFilterTableDisplay(false); setAllFilterButtonsToFalse();}}>Done</button>
+                        <button className={ ppTableDisplay ? "clickedButton" : "s"} id="pbButton" onClick={() => {setPpTableDisplay(!ppTableDisplay)} }>Preferred prices</button>
+                        <InputSlider tableDisplay={ppTableDisplay} productsPriceRange={productsPriceRange} ranges={productsPrices}  step={5} setPreferredLowestPrice={(number) => {setProductsPriceRange({lowestPrice : number ,highestPrice : productsPriceRange.highestPrice})}} setPreferredHighestPrice={(number) => {setProductsPriceRange({lowestPrice : productsPriceRange.lowestPrice ,highestPrice : 999 - number })}} ></InputSlider>
                         <button className={ pbTableDisplay ? "clickedButton" : "s"} id="pbButton" onClick={() => {setPbTableDisplay(!pbTableDisplay)} }>Preferred brands</button>
+                        <CheckBox  tableDisplay={pbTableDisplay} productsX={productsBrands} nameCheckBox="preferredBrands" onChangeCheckBox={(index) => toggleBrandPreferences(index)}></CheckBox>
                         <button className={ psTableDisplay ? "clickedButton" : "s"} id="psButton" onClick={() => {setPsTableDisplay(!psTableDisplay)} }>Preferred sizes</button>
+                        <CheckBox tableDisplay={psTableDisplay} productsX={productsSizes} nameCheckBox="preferredSizes" onChangeCheckBox={(index) => toggleSizePreferences(index)}></CheckBox>
                         <button className={ pcTableDisplay ? "clickedButton" : "s"} id="pcButton" onClick={() => {setPcTableDisplay(!pcTableDisplay)} }>Preferred colors</button>
+                        <CheckBox tableDisplay={pcTableDisplay} productsX={productsColors} nameCheckBox="preferredColors" onChangeCheckBox={(index) => toggleColorPreferences(index)}></CheckBox>
+
                     </div>
 
                 </div>
 
-
-            <div id="thirdElement">
-
-                    <CheckBox  tableDisplay={pbTableDisplay} productsX={productsBrands} nameCheckBox="preferredBrands" onChangeCheckBox={(index) => toggleBrandPreferences(index)}></CheckBox>
-
-                    <CheckBox tableDisplay={psTableDisplay} productsX={productsSizes} nameCheckBox="preferredSizes" onChangeCheckBox={(index) => toggleSizePreferences(index)}></CheckBox>
-
-                    <CheckBox tableDisplay={pcTableDisplay} productsX={productsColors} nameCheckBox="preferredColors" onChangeCheckBox={(index) => toggleColorPreferences(index)}></CheckBox>
-
-            </div>
 
             <div id="fourthElement">
 
